@@ -1,5 +1,8 @@
 . $GLOBALAUTOSTART
 
+# Set keyboard repeat rate
+xset r rate 333 30
+
 # Background
 nitrogen --restore
 
