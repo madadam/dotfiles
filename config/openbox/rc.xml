@@ -687,6 +687,19 @@
 
   # end of the example
 -->
-  <application class="Gvim" name="gvim" type="normal"><maximized>vertical</maximized><position force="no"><x>0</x><y>0</y></position></application>
+  <application class="Gvim" name="gvim">
+    <maximized>vertical</maximized>
+    <position force="no">
+      <x>0</x><y>0</y>
+    </position>
+  </application>
+
+  <application class="Konsole" name="konsole">
+    <maximized>vertical</maximized>
+    <position force="no">
+      <x>-1</x><y>0</y>
+    </position>
+  </application>
+
 </applications>
 </openbox_config>
