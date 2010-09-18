@@ -12,8 +12,5 @@ xcompmgr -n &
 # Panel
 avant-window-navigator &
 
-# Gnome-do
-gnome-do &
-
 # Skype
 skype &

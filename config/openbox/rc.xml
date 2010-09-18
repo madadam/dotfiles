@@ -223,6 +223,13 @@
       </action>
     </keybind>
 
+    <!-- Keybinding for gexec -->
+    <keybind key="W-space">
+      <action name="Execute">
+        <command>gexec</command>
+      </action>
+    </keybind>
+
     <!-- Keybindings for running applications -->
     <keybind key="W-w">
       <action name="Execute">
@@ -698,6 +705,14 @@
     <maximized>vertical</maximized>
     <position force="no">
       <x>-1</x><y>0</y>
+    </position>
+  </application>
+
+  <application class="Gexec">
+    <decor>no</decor>
+    <position>
+      <x>center</x>
+      <y>0</y>
     </position>
   </application>
 
