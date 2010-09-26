@@ -238,12 +238,6 @@
     </keybind>
     <keybind key="W-s">
       <action name="Execute">
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>konsole</name>
-          <icon>konsole</icon>
-        </startupnotify>
-
         <command>gimme konsole</command>
       </action>
     </keybind>
