@@ -70,3 +70,25 @@ map <s-f3> :cprev<cr>
 " CommandT
 nmap <c-t> :CommandT<cr>
 nmap ,t :CommandTFlush<cr>
+
+" Kill trailin gspaces
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
+autocmd BufWritePre *.rb     :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.erb    :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.rake   :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre Rakefile :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre Gemfile  :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre Capfile  :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.css    :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.js     :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.d      :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.txt    :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre README   :call <SID>StripTrailingWhitespaces()
+
+map <c-s-r> :call <SID>StripTrailingWhitespaces()<cr>
