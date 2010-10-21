@@ -90,5 +90,3 @@ autocmd BufWritePre *.js     :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre *.d      :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre *.txt    :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre README   :call <SID>StripTrailingWhitespaces()
-
-map <c-s-r> :call <SID>StripTrailingWhitespaces()<cr>
