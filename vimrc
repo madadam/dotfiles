@@ -90,3 +90,8 @@ autocmd BufWritePre *.js     :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre *.d      :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre *.txt    :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre README   :call <SID>StripTrailingWhitespaces()
+
+map ,t :call <SID>StripTrailingWhitespaces()<cr>
+
+" Set comment style for D source files
+autocmd VimEnter * :call TCommentDefineType('d', '// %s')
