@@ -10,7 +10,11 @@ export DE=kde
 xset r rate 333 30
 
 # Composition
-xcompmgr -n &
+# xcompmgr -n &
+
+# Network
+ck-launch-session
+nm-applet &
 
 # Panel
 avant-window-navigator &
