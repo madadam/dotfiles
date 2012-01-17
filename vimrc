@@ -57,7 +57,7 @@ imap <c-q> <esc><c-q>
 map <f3> :cnext<cr>
 map <s-f3> :cprev<cr>
 
-" Kill trailin gspaces
+" Kill trailing spaces
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
   let c = col(".")
@@ -78,4 +78,22 @@ autocmd BufWritePre *.txt    :call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre README   :call <SID>StripTrailingWhitespaces()
 
 map <leader>w :call <SID>StripTrailingWhitespaces()<cr>
+
+" Switch between header (.h) and implementation (.cpp) files
+"
+" Opens the file in a new tab or switches to it if already open.
+"
+" Assumes .h extension for headers and .cpp for implementations and also that
+" both are in the same directory.
+fun! SwitchSourceHeader()
+  write
+
+  if (expand ("%:e") == "cpp")
+    tab drop %:r.h
+  else
+    tab drop %:r.cpp
+  endif
+endfun
+
+map <leader><tab> :call SwitchSourceHeader()<cr>
 
